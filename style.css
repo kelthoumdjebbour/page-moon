@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background:linear-gradient(#000,#10e6f5e8);
+    height: 100vh;
+    font-family: system-ui;
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+
+}
+header{ display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        position: fixed;
+        width: 100%;
+        z-index: 1; /*controla el orden de apilamiento de los elementos*/
+        
+}
+header .logo{
+    font-size: 30px;
+    text-transform: capitalize;
+    
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+header ul li {
+    margin-right: 30px;
+    
+}
+header ul li a{
+    padding: 6px 6px;
+    border-radius: 20px;
+}
+header ul li a:hover,.active{
+    background: #d36b16;
+    color: #000;
+}
+#man{ display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;/*Esto significa que el contenido (moon) que está fuera de los límites del contenedor no será visible para el usuario.*/
+}
+
+
+#man::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+height: 5px;
+width: 100%;
+background:linear-gradient(to top,#200f01,transparent)
+
+}
+#man img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    
+    object-fit: cover;/*para la imagen que se ajustará dentro del contenedor global*/
+}
+#moon{
+transform: translateY(50px);
+mix-blend-mode:screen;/*para crear efectos de mezcla interesantes y jugar con la apariencia visua*/
+}
+#luna{
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    transform: translateY(-50px);
+}
+.content{
+    color: white;
+    padding: 20px;
+}
+.content h2{
+ margin: 10px;
+ font-size: 20px;
+}
+.content p{
+    margin: 10px;
+
+}
